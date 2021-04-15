@@ -1,36 +1,51 @@
 package sarcina_indiv;
 
 import javax.swing.*;
-
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		JFrame f = new JFrame("Suma");
-        JTextField label1 =  new JTextField(16);
-        JTextField label2 = new JTextField(16);
-        JTextField label3 = new JTextField(16);
-        JButton b = new JButton("Calculeaza");
+		JFrame x = new JFrame("Calculator");
+		JTextField n1 = new JTextField(); x.add(n1);
+		JTextField n2 = new JTextField(); x.add(n2);
+		JTextField result = new JTextField(); x.add(result);
+		JComboBox<String> operation;
+		operation = new JComboBox<String>();
+		operation.addItem("+");
+		operation.addItem("-");
+		operation.addItem("*");
+		operation.addItem("/");
+		operation.setSelectedIndex(0);
+        x.add(operation);
+		JButton A = new JButton("Calculate"); x.add(A);
 
-        label1.setBounds(10, 0, 200, 40);
-        label2.setBounds(10, 50, 200, 40);
-        label3.setBounds(10, 100, 200, 40);
-        b.setBounds(10, 150, 200, 40);
+		n1.setBounds(10, 10, 100, 30);
+		operation.setBounds(115, 10, 100, 30);
+		n2.setBounds(220, 10, 100, 30);
+		result.setBounds(330, 10, 210, 30);
+		A.setBounds(150, 60, 210, 30);
 
-        f.add(b);
-        f.add(label1);
-        f.add(label2);
-        f.add(label3);
+		A.addActionListener(cl -> {
+			double num1 = Double.parseDouble(n1.getText());
+			double num2 = Double.parseDouble(n2.getText());
+			char operand = (operation.getSelectedItem().toString().charAt(0));
+			switch (operand) {
+			case '+':
+				result.setText(num1 + num2 + "");
+				break;
+			case '-':
+				result.setText(num1 - num2 + "");
+				break;
+			case '*':
+				result.setText(num1 * num2 + "");
+				break;
+			case '/':
+				result.setText(num1 / num2 + "");
+				break;
+			}
+		});
 
-        b.addActionListener(ae -> {
-            int first = Integer.parseInt(label1.getText());
-            int second = Integer.parseInt(label2.getText());
-           label3.setText(first + second + "");
-        });
-
-        f.setSize(235, 240);
-        f.setLayout(null);
-        f.setVisible(true);
+		x.setSize(600, 150);
+		x.setLayout(null);
+		x.setVisible(true);
 	}
-
 }
