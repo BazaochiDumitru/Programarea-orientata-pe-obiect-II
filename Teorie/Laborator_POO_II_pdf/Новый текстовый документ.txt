@@ -1,0 +1,139 @@
+int er = 0;
+		// verifica daca au fost introduse numere
+		try {
+			nr1 = Integer.parseInt(sir); 
+		} catch (NumberFormatException e1) {
+			er=1;
+			JOptionPane.showMessageDialog(this, "ERROR, Please enter some numbers!");
+		}
+		// calculeaza suma numerelor introduse
+		String s = new String(A1.getText());
+		StringTokenizer st = new StringTokenizer(s);
+		int k = 0;
+		while(st.hasMoreTokens()){
+			try {
+				k+=Integer.parseInt(st.nextToken());
+				k+=nr2;
+			} catch (NumberFormatException e2) {}
+		}
+		JOptionPane.showMessageDialog(this, "Sum of numbers is: "+k);
+		// numara numerele distincte
+		String sr = new String();
+		boolean logic;
+		Set<Integer> sti = new HashSet();
+		while(st.hasMoreTokens()){
+			try{
+				nr2=Integer.parseInt(st.nextToken());
+				logic=sti.add(nr2);
+				if (logic)
+					sr+=nr2+" ";
+			}
+			catch(NumberFormatException e) {}
+		}
+		JOptionPane.showMessageDialog(this, "Total numbers: " sti.size()+" numbers "+sr);
+		// arata primele 3 numrele maxime
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+package exE_individual;
+
+public class exE {
+
+	public static void main(String[] args) {
+		Change x = new Change("Individual exE");
+	}
+}
+
+
+package exE_individual;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Change extends JFrame{
+	JFrame f = new JFrame();
+	JTextField label1 = new JTextField(16);
+	JTextField label2 = new JTextField(16);
+	JButton b = new JButton("click");
+
+	label1.setBounds(10, 0, 200, 40);
+	label2.setBounds(10, 50, 200, 40);
+	b.setBounds(10, 150, 200, 40);
+
+	f.add(b);
+	f.add(label1);
+	f.add(label2);
+
+	b.addActionListener(ae -> {
+		try {
+	                String first = label1.getText();
+	                String second = label2.getText();
+	                ex5(first);
+	            } catch (Throwable error) {
+	                System.out.print(error);
+	            }
+	        });
+
+	        f.setSize(535, 540);
+	        f.setLayout(null);
+	        f.setVisible(true);
+	    }
+	}
+	public static void ex5(String value) {
+	        String str = "__my__";
+	        printResult("№5", "Sirul pana la inlocuire 'my' на '__my__' este: " + value.replace("my", str));
+	}
+	public static void printResult(String title, String value) {
+	        System.out.print(value);
+	        JFrame frame = new JFrame(title);
+	        JLabel label = new JLabel(value);
+
+	        label.setBounds(10, 0, 400, 100);
+	        frame.add(label);
+	        frame.setSize(500, 200);
+	        frame.setLayout(null);
+	        frame.setVisible(true);
+	    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

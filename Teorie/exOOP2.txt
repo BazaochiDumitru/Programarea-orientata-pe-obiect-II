@@ -1,0 +1,203 @@
+1. Ce intelegi prin Programare orientat pe obiect?
+Programarea Orientata Obiect este este o paradigma de programare, axata pe ideea incapsularii in care programele sunt reprezentate sub forma unor colectii de obiecte sau clase care interactioneaza intre ele prin intermediul mesajelor. Conceptele de baza ale POO sunt incapsularea adica gruparea datelor, polimorfizmul ce permite abstractizarii o descriere conceptuala mai simpla a solutiei. Acesta a aparut din necesitatea exprimarii problemei intr-un mod mai simplu, pentru a putea fi inteleasa de cat mai multi programatori. Ideea POO este de a crea programele ca o colectie de obiecte.
+
+2. Prin ce difera limbajul Java de alte limbaje?
+Java este un limbaj de programare obiect orientat, puternic tipizat. Dintre caracteristicile lui putem mentiona simplitatea deoarece a imprumutat o mare parte parte din sintaza de la C si C++, dar are un model al obiectelor mai simplu si prezinta mai putine facilitati de nivel jos. Un program Java compilat, corect scris, poate fi rulat fara modificari pe orice platforma care e instalata o masina virtuala Java. Acest nivel de portabilitate inexistent pentru limbaje mai vechi cum ar fi C este posibil deoarece sursele Java sunt compilate intr-un format standard numit cod de octe?i care este intermediar intre codul masina si codul sursa.
+
+3. Ce reprezinta constructorul clasei?
+Constructorul este o functie care se apeleaza automat la crearea unui obiect. Acesta are numele clasei in care este declarat. El nu returneaza explicit un tip anume si nici o valoare, poate avea oricati parametri. Tipul constructorului depinde de clasa din care face parte.
+
+4. De ce este nevoie de a crea obiecte ale unei clase?
+O clasa descrie unul sau mai multe obiecte care pot fi precizate printr-un set uniform de date si cod.Orice obiect are memoria sa proprie unde se pastreaza valorile tuturor datelor sale.Clasa defineste caracteristicile si comportarea obiectelor.In domeniul de definitie al unei clase se pot crea obiecte ale clasei. Fiecare obiect contine cate o copie individuala a fiecarei variabile a clasei respective si pentru fiecare obiect se poate apela orice fel de functie membra publica a clasei. Crearea unui obiect presupune specificarea clasei din care face parte, astfel identificandu-se proprietatile obiectului si modul in care acestea pot fi folosite si prelucrate.
+
+5. Factorial
+import org.junit.Test; 
+import java.math.BigInteger; 
+public class Main { 
+ @Test 
+ public void solve() { 
+ System.out.println(fact(1000)); 
+ } 
+ 
+ public static BigInteger fact(int a) { 
+ BigInteger factorial = BigInteger.ONE; 
+ 
+ BigInteger factz = BigInteger.valueOf(a); 
+ 
+ if (a == 0) { 
+ return factorial; 
+ } else 
+ { 
+ return factz.multiply(fact(a-1)); 
+ } 
+ } 
+}
+
+// acest exemplu am pus pe moodle
+public BigInteger factorial(int n) { 
+BigInteger fact = BigInteger.One; 
+for (int i = 2; i <= n; i++) 
+fact = fact.multiply(BigInteger.valueOf(i)); 
+return fact; 
+}
+
+// cum trebuie
+import java.match.*; 
+class t{ 
+ public static void main (String [] args){ 
+  BigInteger n1=new BigInteger ("1"); 
+  BigInteger n2=new BigInteger ("1"); 
+  BigInteger unu=new BigInteger ("1"); 
+  for(int i=1;i<=1000;i++) 
+  { 
+   n1=n1.multilpy(n2); 
+   n2=n2.add(unu); 
+  } 
+  System.out.println(n1.toString()); 
+ } 
+}
+
+6. Care sunt particularitatile de lucru cu tablourile unidimensionale si bidimensionale in java?
+In java un tablou este tratat ca un obiect, deci el este un un tip de referinta.Limbajul Java ofera ca tip predefinit tipul tablou, cu ajutorul caruia se pot crea colectii de variabile de acelasi tip. Componentele tabloului pot fi accesate cu ajutorul unui index. Acesta trebuie sa apartina unui tip intreg, iar numerotarea elementelor intr-un tablou incepe intotdeauna de la 0. Un tablou bidimensional este considerat de fapt ca un tablou de tablouri. Deci, elementele unui tablou bidimensional sunt referinte la tablouri unidimensionale.
+
+7. For si for each asemanari si deosebiri.
+La for trebuie de specificat limitele tabloului.
+For executa pana in momentul cand in ciclu nu va fi valoarea falsa
+
+Deosebiri:
+Ciclul for este o structura de control pentru specificarea itera?iei care permite executarea repetata a codului.
+O bucla for poate fi utilizata pentru a prelua un anumit set de elemente.
+Buclele foreach sunt structuri de control pentru traversarea elementelor dintr-o matrice sau dintr-o colec?ie.
+Bucla foreach nu poate fi utilizata pentru a prelua un anumit set de elemente.
+
+Asemanari:
+Atat for cat si foreach sunt structuri de control care sunt folosite pentru a repeta un bloc de instructiuni.
+
+8. Prin ce difera sirurile de caractere de tablouri unidimensionale cu valori char?
+Implementarea datelor in siruri de caractere este imutabila, pe cand in tablouri este mutabila.
+Sirurile de caractere este o clasa cu functiile sale de tip ca charAt, substring, concat, equals, pe cand in tablouri acestea lipsesc.
+Sirul poate fi contatenat cu ajutorul +, sau functiei concat, iar tabloul nu.
+Stringul este folosit pentru a salva o secventa de caractere si sa fie reprezentata ca un singur tip de date, pe cand tabloul este o colectie de date secventiala.
+
+9. De ce este nevoie de clase infasuratoare?
+Un obiect al clasei infasuratoare poate retine o valoare a tipului primitiv. Fiecare clasa infasuratoare este inzestrata cu o metoda constructor. Astfel fiecare tip primitiv are clasa sa. Nevoia consta in faptul: 
+sa inglobeze metode de conversie intre valori ale tipurilor primitive si obiecte ale altor 
+clase, precum si constante speciale legate de tipurile primare; 
+sa permita crearea de obiecte care sa contina valori ale tipurilor primare, si care apoi 
+sa poata fi utilizate in cadrul unor structuri unde nu pot sa apara decat obiecte, nu date 
+simple.
+
+10. Ce reprezinta clasele interioare? Pentru ce sunt utile?
+Clasele declarate in interiorul unei alte clase se numesc clase interioare. Acestea permit gruparea claselor care sunt legate logic ?i controlul vizibilita?ii uneia din cadrul celorlalte.Clasa interioara nu poate exista fara clasa in care se con?ine. Domeniul de vizibilitate al clasei este limitata de clasa sa externa. Daca clasa interna este definita in limitele domeniului de vizibilitate a clasei el devine membru clasei din care face parte.
+
+11. In ce caz folosim clase abstracte si in ce caz utilizam clase finale?
+O clasa abstracta con?ine date membru si mai multe metode, dar unele pot fi, la rindul lor abstracte. Clasele abstracte se utilizeaza pentru a fi extinse. Folosim o clasa abstracta atunci cand vrem sa implementam doar unele din metode din clasa si ca clasa respectiva sa nu poate fi instantiata. Clasa finala nu poate fi extinsa de catre alte clase.  Este utila in primul rand compilatorului care poate genera metodele respective direct in codul rezultat fiind sigur ca metoda nu va avea nici o alta implementare in subclase.
+
+12. Care este diferenta intre interfete si clase abstracte?
+Campurile de clasa abstracta nu sunt statice sau finale, spre deosebire de interfa?a care are tabele statice si finale.
+Nici un cod de implementare nu poate fi utilizat in interfe?e in timp ce poate fi folosit in clasa abstracta.
+Vizibilitatea interfetei poate fi publica numai in timp ce vizibilitatea in clasa abstracta poate varia.
+O clasa abstracta va mosteni automat clasa de obiecte, dar nu este posibila in interfa?a.
+Clasa abstracta este mai rapida decat interfa?a in implementare.
+
+13. Care din temele studiate la disciplina data, deocamdata considerati cea mai importanta. Argumentati raspunsul.
+Consider cea mai importanta tema studiata la aceasta disciplina este clasele si obiectele in limbajul Java. 
+Clasele reprezinta principiile de baza ale programarii orientate obiect. Clasele reprezinta notiuni abstracte, povesti, modele (blueprints), ce descriu:
+- caracteristicile, atributele unui obiect; reprezinta ceea ce stie sau ce este obiectul;
+- ce stie sa faca obiectul, comportamentul acestuia descris de metodele sale;
+Pe baza claselor,programatorul poate defini ceva concret, obiecte. Astfel, prin instantierea clasei (atributele definite in clasa, sunt initializate cu valori) se obtin variabile de tip obiect.
+
+14. Pentru ce este nevoie de limbaje de modelare?
+Un limbaj de modelare este un set standard de diagrame si notatii pentru analiza si proiectarea orientata obiect a diverselor tipuri de sisteme (sisteme software, sisteme hardware sau organizatii), descriind totodata si semantica acestor diagrame si simboluri. Este nevoie pentru vizualizarea unui sistem, specificarea structurii sale sau a comportarii, oferirea unui sablon care sa ajute la constructie, documentarea deciziilor luate.
+
+15. Ce fel de diagrame e posibil de a realiza cu UML?
+Cu ajutorul UML pot fi realizate mai multe tipuri de diagrame:
+1.    diagrama cazurilor de utilizare,
+2.    diagrama de secventa,
+3.    diagrama de colaborare,
+4.    diagrama de clase,
+5.    diagrama de stari,
+6.    diagrama de componente,
+7.    diagrama de constructie,
+8.    diagrama de obiecte,
+9.    diagrama de activitati.
+
+16. Defini?i urmatoarele no?iuni: asociere, agregare, generalizare ?i dependen?a.
+Asocierea este orice rela?ie intre clase in care instan?ele unei clase au o referin?a de camp la o instan?a a unei alte clase. Asociere - Modeleaza o comunicare intre elementele pe care le conecteaza. Poate sa apara intre un actor si un UseCase (actorul initiaza executia cazului de utilizare sau ofera functionalitate pentru realizarea acestuia), doua UseCase-uri (transfer de date, trimitere de mesaje/semnale).
+
+Agregarea este proprietatea obiectelor de a putea incorpora alte obiecte. Asa dar, "datele" continute intr-un obiect pot fi nu numai date primitive, ci si obiecte. Se pot astfel crea obiecte cu structuri din ce in ce mai complexe.
+
+Generalizarea reprezinta extragerea elementelor comune (atribute, operatii si constrangeri) ale unui ansamblu de clase intr-o noua clasa mai generala numita superclasa (care reprezinta o abstractie a subclaselor ei). Generalizarea semnifica "este un" atunci cand un obiect dintr-o clasa din ansamblul generalizat este in acelasi timp si obiect al superclasei, si de tip "este un fel de" atunci cand un obiect dintr-o clasa din ansamblul generalizat este doar aproximativ si obiect al superclasei (aproximatia venind din rescrierile codurilor operate in clasa generalizata).
+
+Dependenta este o relatie de tip "foloseste", o relatie intre doua elemente ale modelului in care o
+schimbare in unul dintre elemente poate cauza o schimbare in celalalt.
+
+17. Ce reprezinta clonarea obiectelor?
+Clonarea obiectelor in Java este o metoda pentru a face duplicarea acestor obiecte. Obiectele sunt manipulate prin variabile de referin?a ?i nu exista niciun operator pentru copierea unui obiect - operatorul de atribuire duplica referin?a, nu obiectul. Este un nou mod de a crea un obiect prin copierea tuturor datelor si atributelor din obiectul original. Datorita acestei metode este posibil de realizat aceasta functionalitate.
+
+18. Ce reprezinta serializarea?
+Serializarea este o metoda prin care se pot salva, intr-o maniera unitara, datele impreuna cu signatura unui obiect. Folosind aceasta operatie se poate salva intr-un fisier, ca sir de octeti, o instanta a unei clase, in orice moment al executiei. De asemenea, obiectul poate fi restaurat din fisierul in care a fost salvat in urma unei operatii de serializare
+
+19. Care sunt particularitatile programarii de retea pentru Java?
+Programarea in retea implica trimiterea de mesaje si date intre aplica?ii ce ruleaza
+pe calculatoare aflate intr-o retea locala sau conectate la Internet.Pachetul care ofera suport pentru
+realizarea aplica?iilor de retea in Java este java.net, iar clasele din acest pachet ofera o modalitate facila
+de programare in re?ea a unei aplicatii distribuite. Cele mai importante concepte specifice mecanismelor de tip socket existente in pachetul Java.net, refera cateva notiuni fundamentale din domeniul retelelor de calculatoare cum ar fi: protocol, port, adresa IP, socket. Un protocol reprezinta o conventie de reprezentare a datelor folosita in comunicarea intre doua calculatoare. Adresa IP.Orice calculator conectat la Internet este identificat in mod unic de adresa sa IP. Identificarea proceselor efectuate de calculator se realizeaza prin intermediul portului. Socket este o abstractie folosita pentru reprezentarea proceselor ce au loc intr-o retea.
+
+20. Formulati definitia notiunii de pattern de programare, tinand cont de materialele studiate.
+Design pattern sunt solutii tipice la problemele care apar frecvent in proiectarea de software. Sunt ca niste planuri prefabricate pe care le puteti personaliza pentru a rezolva o problema de proiectare recurenta din codul dvs.In general pattern-urile orientate pe obiect arata relatiile si interac?iunile dintre clase sau obiecte, fara a specifica insa forma finala a claselor sau a obiectelor implicate. Ca acestea sa nu complice structura proiectului trebuie intai intelese daca este cazul sa fie aplicat un anumit pattern, si de-abia apoi adaptat pentru situatia respectiva.
+
+21. Ce reprezinta patternurile creationale? Dati exemplu de patternuri creationale
+Patternurile creationale sunt modele de proiectare care se ocupa de mecanismele de creare a obiectelor, incercand sa creeze obiecte intr-un mod adecvat situa?iei. Forma de baza de creare a obiectelor ar putea duce la probleme de proiectare sau la o complexitate suplimentara a proiectarii. Modelele de proiectare crea?ionale rezolva aceasta problema controland cumva crearea obiectului. Ca exemple pot fi enumerate:
+Singleton, Multiton, Abstract Factory, Builder, Factory Method, Object Pull, Prototype
+
+22. Ce reprezinta patternurile comportamentale? Exemple
+Patternurile comportamentale (behavioural pattern) sunt modele de proiectare care identifica modele comune de comunicare intre obiecte ?i realizeaza aceste tipare. Aici pot fi utilizate 2 mecaniste: mostenirea si compozitia. 
+
+23. Ce reprezinta patternurile structurale? Exemple
+Patternurile structurale (structural pattern) sunt preocupate de modul in care clasele ?i obiectele sunt compuse pentru a forma structuri mai mari. Modelele structurale de clasa folosesc mo?tenirea pentru a compune interfe?e sau implementari. Mostenire - clasa de baza define?te interfa?a iar clasele extinse realizarea. Aceste structuri vor fi statice. Compozi?ie – obiectele diferitor clase sunt unite in structuri. Aceste structuri sunt dinamice ?i pot fi modificate in timpul execu?iei.
+
+24. Raspunde succint
+1. Formulati definitia notiunii de pattern de programare, tinand cont de materialele studiate.
+Design pattern sunt solutii tipice la problemele care apar frecvent in proiectarea de software. Sunt ca niste planuri prefabricate pe care le puteti personaliza pentru a rezolva o problema de proiectare recurenta din codul dvs. In general pattern-urile orientate pe obiect arata relatiile si interactiunile dintre clase sau obiecte, fara a specifica insa forma finala a claselor sau a obiectelor implicate. Ca acestea sa nu complice structura proiectului trebuie intai intelese daca este cazul sa fie aplicat un anumit pattern, si de-abia apoi adaptat pentru situatia respectiva.
+
+2. Formulati conditiile in care trebuie sa fie folosite patternurile de programare.
+Patternurilor de programare sunt utilizate in proiectarea aplica?iilor, precum ?i in acele condi?ii in care este necesar sa rezolvam o problema similara.
+
+3. Care sunt dezavantajele folosirii patternurilor de programare.
+E posibil ca veti folosi un pattern sau o abordare foarte similara fara a cunoaste
+Patternurile de programare nu pot fi aplicate direct.
+
+25. Activitate la tema MVC
+1. Cand este nevoie de a aplica modelul MVC?
+Modelul MVC este nevoie de a fi aplicat pentru a desparti logica site-ului de partea de design, previne refolosirea codurilor si organizarea acestora DRY (Don't Repeat Yourself). Datorita separarii vom avea o structura mai solida.
+
+2. Care este esenta modelului MVC?
+MVC - Model View Controller
+Model - manipuleaza operatiunile logice si de utilizare de informatie (trimisa dinainte de catre rangul sau superior) pentru a rezulta de o forma u?or de inteles.
+View - reprezentarea grafica, sau mai bine zis, exprimarea ultimei forme a datelor: interfata grafica ce interactioneaza cu utilizatorul final. Rolul sau este de a evidentia informatia obtinuta pana ce ea ajunge la controlor.
+Controller - putem controla accesul la aplicatia noastra. Pot fi fisiere, scripturi (eng. scripts) sau programe, in general orice tip de informatie permisa de interfata. In acest fel putem diversifica continutul nostru de o forma dinamica si statica, in acelasi timp.
+
+3. Argumentati de ce MVC este un pattern de programare.
+MVC este un model de programare deoarece poate separa partile logice ale unei aplicatii si le poate crea separat una de cealalta. Adica, daca scrieri blocuri de cod independente, le puteti modifica dupa cum este necesar fara a afecta alte blocuri de cod.
+
+4. Inserati screenshot de la lucru la proiectului de prezentare.
+img in word
+
+26. Ce reprezinta biblioteca Swing?
+Biblioteca Swing este un set de instrumente GUI pentru Java. Swing a fost dezvoltat pentru a oferi un set de componente GUI mai sofisticat decat Window Toolkit. El ofera un aspect care emuleaza aspectul mai multor platforme iar elementele Swing arata la fel in toate sistemele de operare. Printre aceste alemente pot fi mentionate butoanele campurile de introducere, tabele, iar logica si interfata sunte separare in Swing de MVC.
+
+27. Prin ce se deosebeste Javafx de Swing?
+Swing este setul de instrumente standard pentru dezvoltatorii Java pentru construirea de interfete grafice, in timp ce JavaFX ofera suport de platforma pentru construirea de aplicatii desktop. Swing poate oferi un aspect decent pentru componentele interfetei cu utilizatorul, in timp ce JavaFX poate oferi o aplicaiie bogata cu o interfata de utilizator moderna. Swing a reusit inca de la inceputuri sa creeze o componenta UI utilizand clase standard de componente Java, in timp ce Java FX foloseste in mod nativ un limbaj declarativ numit JavaFX scripting.
+
+28. Javafx
+1. De ce tehnologiile Swing ?i JavaFX reprezinta o implementare MVC?
+Swing ?i JavaFX sunt implementari in MVC, deoarece JavaFX permite utilizarea Java FXM pentru a proiecta cu un „control de vizualizare model”, in timp ce Swing este inradacinat in proiectarea unui „control de vizualizare model” (MVC). Arhitectura MVC necesita ca aplica?ia vizuala sa fie impar?ita in trei par?i independente: un model care reprezinta datele aplica?iei. O vizualizare care reprezinta o reprezentare vizuala a acestor date.
+
+2. Care sunt asemanarile intre tehnologiile Swing ?i JavaFX?
+Ambele sunt biblioteci reprezinta instrumente utilizate puternic in ecosistemul Java pentru construirea componentelor UI. Ambele sunt implementari ale MVC, desi JavaFx e mai compatibil decat Swing.s
+
+3. Care sunt deosebirile intre tehnologiile Swing ?i JavaFX?
+Swing este setul de instrumente standard pentru dezvoltatorii Java pentru construirea de interfete grafice, in timp ce JavaFX ofera suport de platforma pentru construirea de aplicatii desktop. Swing poate oferi un aspect decent pentru componentele interfetei cu utilizatorul, in timp ce JavaFX poate oferi o aplicaiie bogata cu o interfata de utilizator moderna. Swing a reusit inca de la inceputuri sa creeze o componenta UI utilizand clase standard de componente Java, in timp ce Java FX foloseste in mod nativ un limbaj declarativ numit JavaFX scripting.
+
+4. img in word
